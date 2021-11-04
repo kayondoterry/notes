@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 1: Characterization of Distributed Systems</title>
+    <style>
+      * {
+        /* font-family: "Bad Script", "Handlee", "Nanum Pen", "The Hand",
+          "Sue Ellen Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif; */
+        /* font-size: 1.1rem; */
+        box-sizing: border-box;
+        /* padding: 0; */
+        margin: 0;
+        /* color: rgb(226, 226, 226); */
+      }
+      html {
+        /* background-color: rgb(37, 37, 37); */
+      }
+      body {
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        counter-reset: section;
+      }
+      h2 {
+        text-decoration: underline;
+      }
+      .s-note {
+        margin: 30px 0;
+      }
+      .s-question {
+        font-weight: bold;
+      }
+      .s-question::before {
+        counter-increment: section;
+        content: counter(section) ". ";
+      }
+      .s-answer {
+        /* display: none; */
+      }
+      .s-todo {
+        color: red;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>1.1 Introduction</h2>
+
+    <div class="s-note">
+      <div class="s-question">What is a distributed system?</div>
+      <div class="s-answer">
+        A distributed system is one in which hardware and software components
+        located at networked computers communicate and coordinate their actions
+        only by passing messages.
+      </div>
+    </div>
+
+    <div class="s-note">
+      <div class="s-question">
+        Significant consequences of the above definition of a distributed system
+      </div>
+      <div class="s-answer">
+        <ul>
+          <li>Concurrency</li>
+          <li>No global clock</li>
+          <li>Independent Failure</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="s-note">
+      <div class="s-question">
+        The primary motivation for constructing and using distributed systems
+        stems from a desire to ????????
+      </div>
+      <div class="s-answer">
+        The primary motivation for constructing and using distributed systems
+        stems from a desire to share resources.
+      </div>
+    </div>
+
+    <div class="s-note">
+      <div class="s-question">
+        Examples of resources that can be shared using a distributed system
+      </div>
+      <div class="s-answer">
+        <ul>
+          <li>Hardware e.g. disks, printers, cpu, memory, screen</li>
+          <li>Software e.g. files, databases, data objects, audio/video streams, webpage</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>1.2 Examples of Distributed Systems</h2>
+
+    <div class="s-note">
+      <div class="s-question">
+        Examples of applications of distributed systems
+      </div>
+      <div class="s-answer">
+        <ul>
+          <li>Web Search</li>
+          <li>Massive Multiplayer Online Games (MMOGs)</li>
+          <li>Financial Trading</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>1.3 Trends in Distributed Systems</h2>
+
+    <div class="s-note">
+      <div class="s-question">
+        Briefly explain the influential trends responsible for the significant
+        changes that distributed systems are undergoing
+      </div>
+      <div class="s-answer">
+        <ul>
+          <li>Pervasive networking and the modern internet</li>
+          <li>Mobile and Ubiquitous Computing</li>
+          <li>Distributed Multimedia Systems</li>
+          <li>Distributed Computing as a Utility</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>1.4 Focus on resource sharing</h2>
+
+    <div class="s-note">
+      <div class="s-question">What is a service?</div>
+      <div class="s-answer">
+        A service is a distinct part of a computer system that manages a
+        collection of related resources and presents their functionality to
+        users and applications.
+      </div>
+    </div>
+
+    <div class="s-note">
+      <div class="s-question">What is a server?</div>
+      <div class="s-answer">
+        A server refers to a running program (a process) on a networked computer
+        that accepts requests from programs running on other computers to
+        perform a service and responds appropriately.
+      </div>
+    </div>
+
+    <div class="s-note">
+      <div class="s-question">What is a remote invocation?</div>
+      <div class="s-answer">
+        It is a complete interaction between a client and a server, from the
+        point when the client sends its request to when it receives the server’s
+        response.
+      </div>
+    </div>
+
+    <h2>1.5 Challenges</h2>
+
+    <div class="s-note">
+      <div class="s-question">
+        Briefly explain the various challenges faced when implementing
+        distributed systems
+      </div>
+      <div class="s-todo">TODO: add defintions</div>
+
+      <div class="s-answer">
+        <ul>
+          <li>Security</li>
+          <li>Heterogeneity</li>
+          <li>Opennes</li>
+          <li>Transparency</li>
+          <li>Failure Handling</li>
+          <li>Quality of Service</li>
+          <li>Concurrency</li>
+          <li>Scalability</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>1.5.1 Heterogeneity</h3>
+
+    <div class="s-note">
+      <div class="s-question">What is middleware?</div>
+      <div class="s-answer">
+        The term middleware applies to a software layer that provides a
+        programming abstraction as well as masking the heterogeneity of the
+        underlying networks, hardware, operating systems and programming
+        languages.
+      </div>
+    </div>
+
+    <div class="s-note">
+      <div class="s-question">Give examples of middleware</div>
+      <div class="s-answer">
+        <ul>
+          <li>Common Object Request Broker Architecture (CORBA)</li>
+          <li>Java RMI</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="s-note">
+      <div class="s-question">What is mobile code?</div>
+      <div class="s-answer">
+        The term mobile code is used to refer to program code that can be
+        transferred from one computer to another and run at the destination e.g
+        Java Applets and JavaScript browser code
+      </div>
+    </div>
+
+    <h3>1.5.2 Openness</h3>
+    <div class="s-note">
+      <div class="s-question">
+        State two security challenges in distributed systems that have not yet
+        been fully met
+      </div>
+      <div class="s-answer">
+        <ul>
+          <li>Denial of Service attacks</li>
+          <li>Security of mobile code</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>1.5.5 Failure handling</h3>
+
+    <div class='s-note'>
+      <div class='s-question'>
+        Briefly explain techniques for dealing with failures
+      </div>
+      <div class='s-answer'>
+        <div class='s-todo'>
+        TODO: 	add explanations
+        </div>
+        
+        <ul>
+          <li>Detecting failures</li>
+          <li>Masking failures</li>
+          <li>Tolerating failures</li>
+          <li>Recovery from failures</li>
+          <li>Redundancy</li>
+        </ul>
+      </div>
+    </div>
+    
+    <h3>1.5.7 Transparency</h3>
+    <div class='s-note'>
+      <div class='s-question'>
+        Briefly explain the different forms of transparency
+      </div>
+      <div class='s-todo'>
+      TODO: 	add definitions
+      </div>
+      
+      <div class='s-answer'>
+        <ul>
+          <li>Access Transparency</li>
+          <li>Location Transparency</li>
+          <li>Concurrency Transparency</li>
+          <li>Replication Transparency</li>
+          <li>Failure Transparency</li>
+          <li>Mobility Transparency</li>
+          <li>Performance Transparency</li>
+          <li>Scaling Transparency</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class='s-note'>
+      <div class='s-question'>
+        What are the main nonfunctional properties of systems that affect the quality of services experienced by clients and user?
+      </div>
+      <div class='s-answer'>
+        <ul>
+          <li>Reliability</li>
+          <li>Security</li>
+          <li>Performance</li>
+        </ul>
+      </div>
+    </div>
+    
+
+  </body>
+</html>

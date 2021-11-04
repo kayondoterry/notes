@@ -1,0 +1,6 @@
+chapter 1
+- table of selected application domains and associated networked applications
+- explanations of the trends in distributed systems
+- definition of mobile and ubiquitous computing (and location-aware/context-aware computing)
+- definition of a cluster computer
+- definition of a blade server
