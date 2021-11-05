@@ -1,355 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 1: Introduction</title>
-    <style>
-      * {
-        /* font-family: "Bad Script", "Handlee", "Nanum Pen", "The Hand",
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 1: Introduction</title>
+  <style>
+    * {
+      /* font-family: "Bad Script", "Handlee", "Nanum Pen", "The Hand",
           "Sue Ellen Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
           sans-serif; */
-        /* font-size: 1.1rem; */
-        box-sizing: border-box;
-        /* padding: 0; */
-        margin: 0;
-        /* color: rgb(226, 226, 226); */
-      }
-      html {
-        /* background-color: rgb(37, 37, 37); */
-      }
-      body {
-        width: 100%;
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
-        counter-reset: section;
-      }
-      h2 {
-        text-decoration: underline;
-        margin: 35px 0;
-      }
-      img {
-        max-width: 100%;
-        max-height: 100%;
-      }
-      .s-note {
-        margin: 30px 0;
-      }
-      .s-question {
-        font-weight: bold;
-      }
-      .s-question::before {
-        counter-increment: section;
-        content: counter(section) ". ";
-      }
-      .s-todo {
-        color: red;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-      .s-note.hide {
-        margin: 15px 0;
-      }
-      .s-answer.hide {
-        display: none;
-      }
-      div.show-hide-answers {
-        position: sticky;
-        top: 0;
-      }
-    </style>
-    <script>
-      window.onload = function () {
-        const sHAButton = document.getElementById("show-hide-answer-button");
-        const answers = document.getElementsByClassName("s-answer");
-        const notes = document.getElementsByClassName("s-note");
-        const doHide = () => {
-          for (const answer of answers) {
-            answer.classList.toggle("hide");
-          }
-          for (const note of notes) {
-            note.classList.toggle("hide");
-          }
-        };
-        doHide();
-        sHAButton.onclick = function () {
-          doHide();
-        };
+      /* font-size: 1.1rem; */
+      box-sizing: border-box;
+      /* padding: 0; */
+      margin: 0;
+      /* color: rgb(226, 226, 226); */
+    }
+
+    html {
+      /* background-color: rgb(37, 37, 37); */
+    }
+
+    body {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      counter-reset: section;
+    }
+
+    h2 {
+      text-decoration: underline;
+      margin: 35px 0;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .s-note {
+      margin: 30px 0;
+    }
+
+    .s-question {
+      font-weight: bold;
+    }
+
+    .s-question::before {
+      counter-increment: section;
+      content: counter(section) ". ";
+    }
+
+    .s-todo {
+      color: red;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .s-note.hide {
+      margin: 15px 0;
+    }
+
+    .s-answer.hide {
+      display: none;
+    }
+
+    div.show-hide-answers {
+      position: sticky;
+      top: 0;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      const sHAButton = document.getElementById("show-hide-answer-button");
+      const answers = document.getElementsByClassName("s-answer");
+      const notes = document.getElementsByClassName("s-note");
+      const doHide = () => {
+        for (const answer of answers) {
+          answer.classList.toggle("hide");
+        }
+        for (const note of notes) {
+          note.classList.toggle("hide");
+        }
       };
-    </script>
-  </head>
-  <body>
-    <div class="show-hide-answers">
-      <button id="show-hide-answer-button">Show/Hide Answers</button>
-    </div>
-    <h1>Chapter 1: Introduction</h1>
+      doHide();
+      sHAButton.onclick = function () {
+        doHide();
+      };
+    };
+  </script>
+</head>
 
-    <div class="s-note">
-      <div class="s-question">What is an operating system?</div>
-      <div class="s-answer">
-        An operating system is software that manages a computer’s hardware. It
-        also provides a basis for application programs and acts as an
-        intermediary between the computer user and the computer hardware.
-      </div>
-    </div>
+<body>
+  <div class="show-hide-answers">
+    <button id="show-hide-answer-button">Show/Hide Answers</button>
+  </div>
+  <h1>Chapter 1: Introduction</h1>
 
-    <div class="s-note">
-      <div class="s-question">Four components of a computer system</div>
-      <div class="s-answer">
-        <ul>
-          <li>Hardware</li>
-          <li>Operating system</li>
-          <li>Application programs</li>
-          <li>User</li>
-        </ul>
-        <p>
-          The hardware—the central processing unit ( CPU ), the memory, and the
-          input/output ( I/O ) devices—provides the basic computing resources
-          for the system. The application programs—such as word processors,
-          spreadsheets, compilers, and web browsers—define the ways in which
-          these resources are used to solve users’ computing problems. The
-          operating system controls the hardware and coordinates its use among
-          the various application programs for the various users.
-        </p>
-      </div>
+  <div class="s-note">
+    <div class="s-question">What is an operating system?</div>
+    <div class="s-answer">
+      An operating system is software that manages a computer’s hardware. It
+      also provides a basis for application programs and acts as an
+      intermediary between the computer user and the computer hardware.
     </div>
+  </div>
 
-    <div class="s-note">
-      <div class="s-question">User View of an Operating System</div>
-      <div class="s-answer">
-        Many computer users sit with a laptop or in front of a PC consisting of
-        a monitor, keyboard, and mouse. Such a system is designed for one user
-        to monopolize its resources. The goal is to maximize the work (or play)
-        that the user is performing. In this case, the operating system is
-        designed mostly for ease of use, with some attention paid to performance
-        and security and none paid to resource utilization —how various hardware
-        and software resources are shared.
-      </div>
+  <div class="s-note">
+    <div class="s-question">Four components of a computer system</div>
+    <div class="s-answer">
+      <ul>
+        <li>Hardware</li>
+        <li>Operating system</li>
+        <li>Application programs</li>
+        <li>User</li>
+      </ul>
+      <p>
+        The hardware—the central processing unit ( CPU ), the memory, and the
+        input/output ( I/O ) devices—provides the basic computing resources
+        for the system. The application programs—such as word processors,
+        spreadsheets, compilers, and web browsers—define the ways in which
+        these resources are used to solve users’ computing problems. The
+        operating system controls the hardware and coordinates its use among
+        the various application programs for the various users.
+      </p>
     </div>
+  </div>
 
-    <div class="s-note">
-      <div class="s-question">System View of an OS</div>
-      <div class="s-answer">
-        <ul>
-          <li>
-            A resource allocator. A computer system has many resources that may
-            be required to solve a problem: CPU time, memory space, storage
-            space, I/O devices, and so on. The operating system acts as the
-            manager of these resources. Facing numerous and possibly conflicting
-            requests for resources, the operating system must decide how to
-            allocate them to specific programs and users so that it can operate
-            the computer system efficiently and fairly.
-          </li>
-          <li>
-            A control program. A control program manages the execution of user
-            programs to prevent errors and improper use of the computer. It is
-            especially concerned with the operation and control of I/O devices.
-          </li>
-        </ul>
-      </div>
+  <div class="s-note">
+    <div class="s-question">User View of an Operating System</div>
+    <div class="s-answer">
+      Many computer users sit with a laptop or in front of a PC consisting of
+      a monitor, keyboard, and mouse. Such a system is designed for one user
+      to monopolize its resources. The goal is to maximize the work (or play)
+      that the user is performing. In this case, the operating system is
+      designed mostly for ease of use, with some attention paid to performance
+      and security and none paid to resource utilization —how various hardware
+      and software resources are shared.
     </div>
-    <div class="s-note">
-      <div class="s-question">What is Moore's Law?</div>
-      <div class="s-answer">
-        Moore’s Law predicted that the number of transistors on an integrated
-        circuit would double every 18 months
-      </div>
-    </div>
-    <div class="s-note">
-      <div class="s-question">What is the kernel?</div>
-      <div class="s-answer">The core part of the OS that is always running</div>
-    </div>
-    <div class="s-note">
-      <div class="s-question">
-        Kernel vs System programs vs Application programs
-      </div>
-      <div class="s-answer">
-        A more com- mon definition, and the one that we usually follow, is that
-        the operating system is the one program running at all times on the
-        computer—usually called the kernel. Along with the kernel, there are two
-        other types of programs: system programs, which are associated with the
-        operating system but are not necessarily part of the kernel, and
-        application programs, which include all programs not associated with the
-        operation of the system.
-      </div>
-    </div>
-    <div class="s-note">
-      <div class="s-question">What is middleware?</div>
-      <div class="s-answer">
-        A more common definition, and the one that we usually follow, is that
-        the operating system is the one program running at all times on the
-        computer—usually called the kernel. Along with the kernel, there are two
-        other types of programs: system programs, which are associated with the
-        operating system but are not necessarily part of the kernel, and
-        application programs, which include all programs not associated with the
-        operation of the system.
-      </div>
-    </div>
-    <h2>1.2 Computer System Organization</h2>
-    <div>
-      <img src="images/pc system.png" alt="pc system" />
-    </div>
-    <div class="s-note">
-      <div class="s-question">What is a device controller?</div>
-      <div class="s-answer">
-        Hardware that controls a specific peripheral device/set of devices
-        manages and communication between them and the computer system. A device
-        controller maintains some local buffer storage and a set of
-        special-purpose registers. The device controller is responsible for
-        moving the data between the peripheral devices that it controls and its
-        local buffer storage.
-      </div>
-    </div>
+  </div>
 
-    <div class="s-note">
-      <div class="s-question">What is a device driver?</div>
-      <div class="s-answer">
-        A program that provides an interface between the OS and a device
-        controller. This device driver understands the device controller and
-        provides the rest of the operating system with a uniform interface to
-        the device.
-      </div>
+  <div class="s-note">
+    <div class="s-question">System View of an OS</div>
+    <div class="s-answer">
+      <ul>
+        <li>
+          A resource allocator. A computer system has many resources that may
+          be required to solve a problem: CPU time, memory space, storage
+          space, I/O devices, and so on. The operating system acts as the
+          manager of these resources. Facing numerous and possibly conflicting
+          requests for resources, the operating system must decide how to
+          allocate them to specific programs and users so that it can operate
+          the computer system efficiently and fairly.
+        </li>
+        <li>
+          A control program. A control program manages the execution of user
+          programs to prevent errors and improper use of the computer. It is
+          especially concerned with the operation and control of I/O devices.
+        </li>
+      </ul>
     </div>
-    <h2>1.2.1 Interrupts</h2>
-    <div class="s-note">
-      <div class="s-question">
-        Briefly explain this typical computer operation: a program performing
-        I/O.
-      </div>
-      <div class="s-answer">
-        Consider a typical computer operation: a program performing I/O . To
-        start an I/O operation, the device driver loads the appropriate
-        registers in the device controller. The device controller, in turn,
-        examines the contents of these registers to determine what action to
-        take (such as “read a character from the keyboard”). The controller
-        starts the transfer of data from the device to its local buffer. Once
-        the transfer of data is complete, the device controller informs the
-        device driver that it has finished its operation. The device driver then
-        gives control to other parts of the operating system, possibly returning
-        the data or a pointer to the data if the operation was a read. For other
-        operations, the device driver returns status information such as “write
-        completed successfully” or “device busy”. But how does the controller
-        inform the device driver that it has finished its operation? This is
-        accomplished via an interrupt.
-      </div>
+  </div>
+  <div class="s-note">
+    <div class="s-question">What is Moore's Law?</div>
+    <div class="s-answer">
+      Moore’s Law predicted that the number of transistors on an integrated
+      circuit would double every 18 months
     </div>
+  </div>
+  <div class="s-note">
+    <div class="s-question">What is the kernel?</div>
+    <div class="s-answer">The core part of the OS that is always running</div>
+  </div>
+  <div class="s-note">
+    <div class="s-question">
+      Kernel vs System programs vs Application programs
+    </div>
+    <div class="s-answer">
+      A more com- mon definition, and the one that we usually follow, is that
+      the operating system is the one program running at all times on the
+      computer—usually called the kernel. Along with the kernel, there are two
+      other types of programs: system programs, which are associated with the
+      operating system but are not necessarily part of the kernel, and
+      application programs, which include all programs not associated with the
+      operation of the system.
+    </div>
+  </div>
+  <div class="s-note">
+    <div class="s-question">What is middleware?</div>
+    <div class="s-answer">
+      A more common definition, and the one that we usually follow, is that
+      the operating system is the one program running at all times on the
+      computer—usually called the kernel. Along with the kernel, there are two
+      other types of programs: system programs, which are associated with the
+      operating system but are not necessarily part of the kernel, and
+      application programs, which include all programs not associated with the
+      operation of the system.
+    </div>
+  </div>
+  <h2>1.2 Computer System Organization</h2>
+  <div>
+    <img src="images/pc system.png" alt="pc system" />
+  </div>
+  <div class="s-note">
+    <div class="s-question">What is a device controller?</div>
+    <div class="s-answer">
+      Hardware that controls a specific peripheral device/set of devices
+      manages and communication between them and the computer system. A device
+      controller maintains some local buffer storage and a set of
+      special-purpose registers. The device controller is responsible for
+      moving the data between the peripheral devices that it controls and its
+      local buffer storage.
+    </div>
+  </div>
 
-    <div class="s-note">
-      <div class="s-question">
-        Explain how hardware interrupts work/what happens when a CPU receives an
-        interrupt
-      </div>
-      <div class="s-answer">
-        Hardware may trigger an interrupt at any time by sending a signal to the
-        CPU , usually by way of the system bus. (There may be many buses within
-        a computer system, but the system bus is the main communications path
-        between the major components.) Interrupts are used for many other
-        purposes as well and are a key part of how operating systems and
-        hardware interact. When the CPU is interrupted, it stops what it is
-        doing and immediately transfers execution to a fixed location. The fixed
-        location usually contains the starting address where the service routine
-        for the interrupt is located. The interrupt service routine executes; on
-        completion, the CPU resumes the interrupted computation.
-      </div>
+  <div class="s-note">
+    <div class="s-question">What is a device driver?</div>
+    <div class="s-answer">
+      A program that provides an interface between the OS and a device
+      controller. This device driver understands the device controller and
+      provides the rest of the operating system with a uniform interface to
+      the device.
     </div>
+  </div>
+  <h2>1.2.1 Interrupts</h2>
+  <div class="s-note">
+    <div class="s-question">
+      Briefly explain this typical computer operation: a program performing
+      I/O.
+    </div>
+    <div class="s-answer">
+      Consider a typical computer operation: a program performing I/O . To
+      start an I/O operation, the device driver loads the appropriate
+      registers in the device controller. The device controller, in turn,
+      examines the contents of these registers to determine what action to
+      take (such as “read a character from the keyboard”). The controller
+      starts the transfer of data from the device to its local buffer. Once
+      the transfer of data is complete, the device controller informs the
+      device driver that it has finished its operation. The device driver then
+      gives control to other parts of the operating system, possibly returning
+      the data or a pointer to the data if the operation was a read. For other
+      operations, the device driver returns status information such as “write
+      completed successfully” or “device busy”. But how does the controller
+      inform the device driver that it has finished its operation? This is
+      accomplished via an interrupt.
+    </div>
+  </div>
 
-    <div class="s-note">
-      <div class="s-question">How are interrupts handled?</div>
-      <div class="s-answer">
-        The interrupt must transfer control to the appropriate interrupt service
-        routine. The straightforward method for managing this transfer would be
-        to invoke a generic routine to examine the interrupt information. The
-        routine, in turn,would call the interrupt-specific handler. However,
-        interrupts must be handled quickly, as they occur very frequently. A
-        table of pointers to interrupt routines can be used instead to provide
-        the necessary speed. The interrupt routine is called indirectly through
-        the table, with no intermediate routine needed. Generally, the table of
-        pointers is stored in low memory (the first hundred or so locations).
-        These locations hold the addresses of the interrupt service routines for
-        the various devices. This array, or interrupt vector, of addresses is
-        then indexed by a unique number, given with the interrupt request, to
-        provide the address of the interrupt service routine for the
-        interrupting device. The interrupt architecture must also save the state
-        information of whatever was interrupted, so that it can restore this
-        information after servicing the interrupt. If the interrupt routine
-        needs to modify the processor state —for instance, by modifying register
-        values—it must explicitly save the current state and then restore that
-        state before returning. After the interrupt is serviced, the saved
-        return address is loaded into the program counter, and the interrupted
-        computation resumes as though the interrupt had not occurred.
-      </div>
+  <div class="s-note">
+    <div class="s-question">
+      Explain how hardware interrupts work/what happens when a CPU receives an
+      interrupt
     </div>
-    <div class="s-note">
-      <div class="s-question">Explain the implementation of interrupts</div>
-      <div class="s-answer">
-        The basic interrupt mechanism works as follows. The CPU hardware has a
-        wire called the interrupt-request line that the CPU senses after
-        executing every instruction. When the CPU detects that a controller has
-        asserted a signal on the interrupt-request line, it reads the interrupt
-        number and jumps to the interrupt-handler routine by using that
-        interrupt number as an index into the interrupt vector. It then starts
-        execution at the address associated with that index. The interrupt
-        handler saves any state it will be changing during its operation,
-        determines the cause of the interrupt, performs the necessary
-        processing, performs a state restore, and executes a return from
-        interrupt instruction to return the CPU to the execution state prior to
-        the interrupt. We say that the device controller raises an interrupt by
-        asserting a signal on the interrupt request line, the CPU catches the
-        interrupt and dispatches it to the interrupt handler, and the handler
-        clears the interrupt by servicing the device. Figure 1.4 summarizes the
-        interrupt-driven I/O cycle.
-        <div>
-          <img src="images/interrupt driven io cycle.png" alt="" />
-        </div>
-      </div>
+    <div class="s-answer">
+      Hardware may trigger an interrupt at any time by sending a signal to the
+      CPU , usually by way of the system bus. (There may be many buses within
+      a computer system, but the system bus is the main communications path
+      between the major components.) Interrupts are used for many other
+      purposes as well and are a key part of how operating systems and
+      hardware interact. When the CPU is interrupted, it stops what it is
+      doing and immediately transfers execution to a fixed location. The fixed
+      location usually contains the starting address where the service routine
+      for the interrupt is located. The interrupt service routine executes; on
+      completion, the CPU resumes the interrupted computation.
     </div>
+  </div>
 
-    <div class="s-note">
-      <div class="s-question">Two types of interrupt request lines</div>
-      <div class="s-answer">
-        Most CPU s have two interrupt request lines. One is the nonmaskable
-        interrupt, which is reserved for events such as unrecoverable memory
-        errors. The second interrupt line is maskable: it can be turned off by
-        the CPU before the execution of critical instruction sequences that must
-        not be interrupted. The maskable interrupt is used by device controllers
-        to request service.
+  <div class="s-note">
+    <div class="s-question">How are interrupts handled?</div>
+    <div class="s-answer">
+      The interrupt must transfer control to the appropriate interrupt service
+      routine. The straightforward method for managing this transfer would be
+      to invoke a generic routine to examine the interrupt information. The
+      routine, in turn,would call the interrupt-specific handler. However,
+      interrupts must be handled quickly, as they occur very frequently. A
+      table of pointers to interrupt routines can be used instead to provide
+      the necessary speed. The interrupt routine is called indirectly through
+      the table, with no intermediate routine needed. Generally, the table of
+      pointers is stored in low memory (the first hundred or so locations).
+      These locations hold the addresses of the interrupt service routines for
+      the various devices. This array, or interrupt vector, of addresses is
+      then indexed by a unique number, given with the interrupt request, to
+      provide the address of the interrupt service routine for the
+      interrupting device. The interrupt architecture must also save the state
+      information of whatever was interrupted, so that it can restore this
+      information after servicing the interrupt. If the interrupt routine
+      needs to modify the processor state —for instance, by modifying register
+      values—it must explicitly save the current state and then restore that
+      state before returning. After the interrupt is serviced, the saved
+      return address is loaded into the program counter, and the interrupted
+      computation resumes as though the interrupt had not occurred.
+    </div>
+  </div>
+  <div class="s-note">
+    <div class="s-question">Explain the implementation of interrupts</div>
+    <div class="s-answer">
+      The basic interrupt mechanism works as follows. The CPU hardware has a
+      wire called the interrupt-request line that the CPU senses after
+      executing every instruction. When the CPU detects that a controller has
+      asserted a signal on the interrupt-request line, it reads the interrupt
+      number and jumps to the interrupt-handler routine by using that
+      interrupt number as an index into the interrupt vector. It then starts
+      execution at the address associated with that index. The interrupt
+      handler saves any state it will be changing during its operation,
+      determines the cause of the interrupt, performs the necessary
+      processing, performs a state restore, and executes a return from
+      interrupt instruction to return the CPU to the execution state prior to
+      the interrupt. We say that the device controller raises an interrupt by
+      asserting a signal on the interrupt request line, the CPU catches the
+      interrupt and dispatches it to the interrupt handler, and the handler
+      clears the interrupt by servicing the device. Figure 1.4 summarizes the
+      interrupt-driven I/O cycle.
+      <div>
+        <img src="images/interrupt driven io cycle.png" alt="" />
       </div>
     </div>
+  </div>
 
-    <div class="s-note">
-      <div class="s-question">
-        The are so many interrupt handlers to store in the interrupt vector, how
-        are they stored?
-      </div>
-      <div class="s-answer">
-        Recall that the purpose of a vectored interrupt mechanism is to reduce
-        the need for a single interrupt handler to search all possible sources
-        of interrupts to determine which one needs service. In practice,
-        however, computers have more devices (and, hence, interrupt handlers)
-        than they have address elements in the interrupt vector. A common way to
-        solve this problem is to use interrupt chaining, in which each element
-        in the interrupt vector points to the head of a list of interrupt
-        handlers. When an interrupt is raised, the handlers on the corresponding
-        list are called one by one, until one is found that can service the
-        request. This structure is a compromise between the overhead of a huge
-        interrupt table and the inefficiency of dispatching to a single
-        interrupt handler.
-      </div>
+  <div class="s-note">
+    <div class="s-question">Two types of interrupt request lines</div>
+    <div class="s-answer">
+      Most CPU s have two interrupt request lines. One is the nonmaskable
+      interrupt, which is reserved for events such as unrecoverable memory
+      errors. The second interrupt line is maskable: it can be turned off by
+      the CPU before the execution of critical instruction sequences that must
+      not be interrupted. The maskable interrupt is used by device controllers
+      to request service.
     </div>
+  </div>
 
-    <h3>1.2.2 Storage Structure</h3>
-
-    <div class="s-note">
-      <div class="s-question">
-        
-      </div>
-      <div class="s-answer">
-        
-      </div>
+  <div class="s-note">
+    <div class="s-question">
+      The are so many interrupt handlers to store in the interrupt vector, how
+      are they stored?
     </div>
-    
-  </body>
+    <div class="s-answer">
+      Recall that the purpose of a vectored interrupt mechanism is to reduce
+      the need for a single interrupt handler to search all possible sources
+      of interrupts to determine which one needs service. In practice,
+      however, computers have more devices (and, hence, interrupt handlers)
+      than they have address elements in the interrupt vector. A common way to
+      solve this problem is to use interrupt chaining, in which each element
+      in the interrupt vector points to the head of a list of interrupt
+      handlers. When an interrupt is raised, the handlers on the corresponding
+      list are called one by one, until one is found that can service the
+      request. This structure is a compromise between the overhead of a huge
+      interrupt table and the inefficiency of dispatching to a single
+      interrupt handler.
+    </div>
+  </div>
+
+  <h3>1.2.2 Storage Structure</h3>
+
+  <div class="s-note">
+    <div class="s-question">
+      First program to run on a computer/which program loads the OS/where is the bootstrap program stored?
+    </div>
+    <div class="s-answer">
+      Computers use other forms of memory as well. For example, the first pro-
+      gram to run on computer power-on is a bootstrap program, which then loads
+      the operating system. Since RAM is volatile—loses its content when power
+      is turned off or otherwise lost—we cannot trust it to hold the bootstrap pro-
+      gram. Instead, for this and some other purposes, the computer uses electri-
+      cally erasable programmable read-only memory (EEPROM) and other forms of
+      firmwar —storage that is infrequently written to and is nonvolatile.
+    </div>
+  </div>
+
+  <div class="s-note">
+    <div class="s-question">
+      Explain the typical instruction–execution cycle, as executed on a system with a von
+      Neumann architecture.
+    </div>
+    <div class="s-answer">
+      The typical instruction–execution cycle, as executed on a system with a von
+      Neumann architecture, first fetches an instruction from memory and stores
+      that instruction in the instruction register. The instruction is then decoded
+      and may cause operands to be fetched from memory and stored in some
+      internal register. After the instruction on the operands has been executed, the
+      result may be stored back in memory.
+    </div>
+  </div>
+
+  
+
+</body>
+
 </html>
